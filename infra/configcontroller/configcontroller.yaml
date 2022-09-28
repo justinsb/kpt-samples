@@ -5,6 +5,13 @@ metadata:
   namespace: binding
 spec:
   location: us-central1
+  projectRef:
+    # project "googleprojectid" should be updated
+    external: "projects/googleprojectid"
   managementConfig:
     standardManagementConfig:
       masterIPv4CidrBlock: 172.16.0.128/28
+      networkRef:
+        name: default
+        # namespace "binding" should be updated
+        namespace: binding
