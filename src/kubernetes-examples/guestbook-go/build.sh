@@ -8,10 +8,12 @@ set -o pipefail
 REPO_ROOT=$(git rev-parse --show-toplevel)
 cd "${REPO_ROOT}"
 
-VERSION=v3.0.20230124
+VERSION=v3.0.20230124-kpt.1
 
 mkdir -p kubernetes-examples/guestbook-go/${VERSION}/
 # TODO: Copy from somewhere
+
+# TODO: Run kpt function to set namespace
 
 kpt pkg init kubernetes-examples/guestbook-go/${VERSION}/ --description "guestbook-go"
 cat > kubernetes-examples/guestbook-go/${VERSION}/README.md <<EOF

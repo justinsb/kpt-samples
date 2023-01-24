@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: guestbook
+  namespace: guestbook-go
+  labels:
+    app: guestbook
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: guestbook
+  template:
+    metadata:
+      labels:
+        app: guestbook
+    spec:
+      containers:
+      - name: guestbook
+        image: justinsb/guestbook:g8b9cbd1
+        ports:
+        - name: http-server
+          containerPort: 3000

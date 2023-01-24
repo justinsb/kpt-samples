@@ -1,0 +1,8 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: v3.0.20230124-kpt.1
+  annotations:
+    config.kubernetes.io/local-config: "true"
+info:
+  description: guestbook-go
